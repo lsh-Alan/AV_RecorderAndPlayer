@@ -1,0 +1,609 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		E7544D702554151200AC036F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E7544D6F2554151200AC036F /* AppDelegate.m */; };
+		E7544D732554151200AC036F /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E7544D722554151200AC036F /* SceneDelegate.m */; };
+		E7544D762554151200AC036F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E7544D752554151200AC036F /* ViewController.m */; };
+		E7544D792554151200AC036F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E7544D772554151200AC036F /* Main.storyboard */; };
+		E7544D7B2554151400AC036F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E7544D7A2554151400AC036F /* Assets.xcassets */; };
+		E7544D7E2554151400AC036F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E7544D7C2554151400AC036F /* LaunchScreen.storyboard */; };
+		E7544D812554151400AC036F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E7544D802554151400AC036F /* main.m */; };
+		E7544D8B2554151400AC036F /* RecorderTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E7544D8A2554151400AC036F /* RecorderTests.m */; };
+		E7544D962554151500AC036F /* RecorderUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = E7544D952554151500AC036F /* RecorderUITests.m */; };
+		E7544DAE255418CC00AC036F /* LAVAudioRecordManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E7544DAD255418CC00AC036F /* LAVAudioRecordManager.m */; };
+		E7544DB72554E14B00AC036F /* LAVAudioPlayerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E7544DB62554E14B00AC036F /* LAVAudioPlayerManager.m */; };
+		E7544DC3255511E900AC036F /* yxqc.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E7544DC2255511E900AC036F /* yxqc.mp3 */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E7544D872554151400AC036F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E7544D632554151200AC036F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E7544D6A2554151200AC036F;
+			remoteInfo = Recorder;
+		};
+		E7544D922554151500AC036F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E7544D632554151200AC036F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E7544D6A2554151200AC036F;
+			remoteInfo = Recorder;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		E7544D6B2554151200AC036F /* Recorder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Recorder.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E7544D6E2554151200AC036F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		E7544D6F2554151200AC036F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		E7544D712554151200AC036F /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
+		E7544D722554151200AC036F /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
+		E7544D742554151200AC036F /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		E7544D752554151200AC036F /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		E7544D782554151200AC036F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		E7544D7A2554151400AC036F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E7544D7D2554151400AC036F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		E7544D7F2554151400AC036F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E7544D802554151400AC036F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		E7544D862554151400AC036F /* RecorderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RecorderTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E7544D8A2554151400AC036F /* RecorderTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RecorderTests.m; sourceTree = "<group>"; };
+		E7544D8C2554151400AC036F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E7544D912554151500AC036F /* RecorderUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RecorderUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E7544D952554151500AC036F /* RecorderUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RecorderUITests.m; sourceTree = "<group>"; };
+		E7544D972554151500AC036F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E7544DAC255418CC00AC036F /* LAVAudioRecordManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LAVAudioRecordManager.h; sourceTree = "<group>"; };
+		E7544DAD255418CC00AC036F /* LAVAudioRecordManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LAVAudioRecordManager.m; sourceTree = "<group>"; };
+		E7544DB52554E14B00AC036F /* LAVAudioPlayerManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LAVAudioPlayerManager.h; sourceTree = "<group>"; };
+		E7544DB62554E14B00AC036F /* LAVAudioPlayerManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LAVAudioPlayerManager.m; sourceTree = "<group>"; };
+		E7544DC2255511E900AC036F /* yxqc.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = yxqc.mp3; sourceTree = SOURCE_ROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E7544D682554151200AC036F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E7544D832554151400AC036F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E7544D8E2554151500AC036F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		E7544D622554151200AC036F = {
+			isa = PBXGroup;
+			children = (
+				E7544D6D2554151200AC036F /* Recorder */,
+				E7544D892554151400AC036F /* RecorderTests */,
+				E7544D942554151500AC036F /* RecorderUITests */,
+				E7544D6C2554151200AC036F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		E7544D6C2554151200AC036F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E7544D6B2554151200AC036F /* Recorder.app */,
+				E7544D862554151400AC036F /* RecorderTests.xctest */,
+				E7544D912554151500AC036F /* RecorderUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E7544D6D2554151200AC036F /* Recorder */ = {
+			isa = PBXGroup;
+			children = (
+				E7544DC2255511E900AC036F /* yxqc.mp3 */,
+				E7544D6E2554151200AC036F /* AppDelegate.h */,
+				E7544D6F2554151200AC036F /* AppDelegate.m */,
+				E7544D712554151200AC036F /* SceneDelegate.h */,
+				E7544D722554151200AC036F /* SceneDelegate.m */,
+				E7544D742554151200AC036F /* ViewController.h */,
+				E7544D752554151200AC036F /* ViewController.m */,
+				E7544DAC255418CC00AC036F /* LAVAudioRecordManager.h */,
+				E7544DAD255418CC00AC036F /* LAVAudioRecordManager.m */,
+				E7544DB52554E14B00AC036F /* LAVAudioPlayerManager.h */,
+				E7544DB62554E14B00AC036F /* LAVAudioPlayerManager.m */,
+				E7544D772554151200AC036F /* Main.storyboard */,
+				E7544D7A2554151400AC036F /* Assets.xcassets */,
+				E7544D7C2554151400AC036F /* LaunchScreen.storyboard */,
+				E7544D7F2554151400AC036F /* Info.plist */,
+				E7544D802554151400AC036F /* main.m */,
+			);
+			path = Recorder;
+			sourceTree = "<group>";
+		};
+		E7544D892554151400AC036F /* RecorderTests */ = {
+			isa = PBXGroup;
+			children = (
+				E7544D8A2554151400AC036F /* RecorderTests.m */,
+				E7544D8C2554151400AC036F /* Info.plist */,
+			);
+			path = RecorderTests;
+			sourceTree = "<group>";
+		};
+		E7544D942554151500AC036F /* RecorderUITests */ = {
+			isa = PBXGroup;
+			children = (
+				E7544D952554151500AC036F /* RecorderUITests.m */,
+				E7544D972554151500AC036F /* Info.plist */,
+			);
+			path = RecorderUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E7544D6A2554151200AC036F /* Recorder */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E7544D9A2554151500AC036F /* Build configuration list for PBXNativeTarget "Recorder" */;
+			buildPhases = (
+				E7544D672554151200AC036F /* Sources */,
+				E7544D682554151200AC036F /* Frameworks */,
+				E7544D692554151200AC036F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Recorder;
+			productName = Recorder;
+			productReference = E7544D6B2554151200AC036F /* Recorder.app */;
+			productType = "com.apple.product-type.application";
+		};
+		E7544D852554151400AC036F /* RecorderTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E7544D9D2554151500AC036F /* Build configuration list for PBXNativeTarget "RecorderTests" */;
+			buildPhases = (
+				E7544D822554151400AC036F /* Sources */,
+				E7544D832554151400AC036F /* Frameworks */,
+				E7544D842554151400AC036F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E7544D882554151400AC036F /* PBXTargetDependency */,
+			);
+			name = RecorderTests;
+			productName = RecorderTests;
+			productReference = E7544D862554151400AC036F /* RecorderTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		E7544D902554151500AC036F /* RecorderUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E7544DA02554151500AC036F /* Build configuration list for PBXNativeTarget "RecorderUITests" */;
+			buildPhases = (
+				E7544D8D2554151500AC036F /* Sources */,
+				E7544D8E2554151500AC036F /* Frameworks */,
+				E7544D8F2554151500AC036F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E7544D932554151500AC036F /* PBXTargetDependency */,
+			);
+			name = RecorderUITests;
+			productName = RecorderUITests;
+			productReference = E7544D912554151500AC036F /* RecorderUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E7544D632554151200AC036F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1210;
+				TargetAttributes = {
+					E7544D6A2554151200AC036F = {
+						CreatedOnToolsVersion = 12.1;
+					};
+					E7544D852554151400AC036F = {
+						CreatedOnToolsVersion = 12.1;
+						TestTargetID = E7544D6A2554151200AC036F;
+					};
+					E7544D902554151500AC036F = {
+						CreatedOnToolsVersion = 12.1;
+						TestTargetID = E7544D6A2554151200AC036F;
+					};
+				};
+			};
+			buildConfigurationList = E7544D662554151200AC036F /* Build configuration list for PBXProject "Recorder" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = E7544D622554151200AC036F;
+			productRefGroup = E7544D6C2554151200AC036F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E7544D6A2554151200AC036F /* Recorder */,
+				E7544D852554151400AC036F /* RecorderTests */,
+				E7544D902554151500AC036F /* RecorderUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E7544D692554151200AC036F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E7544D7E2554151400AC036F /* LaunchScreen.storyboard in Resources */,
+				E7544D7B2554151400AC036F /* Assets.xcassets in Resources */,
+				E7544D792554151200AC036F /* Main.storyboard in Resources */,
+				E7544DC3255511E900AC036F /* yxqc.mp3 in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E7544D842554151400AC036F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E7544D8F2554151500AC036F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E7544D672554151200AC036F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E7544D762554151200AC036F /* ViewController.m in Sources */,
+				E7544D702554151200AC036F /* AppDelegate.m in Sources */,
+				E7544DAE255418CC00AC036F /* LAVAudioRecordManager.m in Sources */,
+				E7544D812554151400AC036F /* main.m in Sources */,
+				E7544D732554151200AC036F /* SceneDelegate.m in Sources */,
+				E7544DB72554E14B00AC036F /* LAVAudioPlayerManager.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E7544D822554151400AC036F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E7544D8B2554151400AC036F /* RecorderTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E7544D8D2554151500AC036F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E7544D962554151500AC036F /* RecorderUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E7544D882554151400AC036F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E7544D6A2554151200AC036F /* Recorder */;
+			targetProxy = E7544D872554151400AC036F /* PBXContainerItemProxy */;
+		};
+		E7544D932554151500AC036F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E7544D6A2554151200AC036F /* Recorder */;
+			targetProxy = E7544D922554151500AC036F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		E7544D772554151200AC036F /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E7544D782554151200AC036F /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		E7544D7C2554151400AC036F /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E7544D7D2554151400AC036F /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		E7544D982554151500AC036F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		E7544D992554151500AC036F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		E7544D9B2554151500AC036F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = KCXSK3HU9Q;
+				INFOPLIST_FILE = Recorder/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = alan.Recorder;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		E7544D9C2554151500AC036F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = KCXSK3HU9Q;
+				INFOPLIST_FILE = Recorder/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = alan.Recorder;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		E7544D9E2554151500AC036F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = KCXSK3HU9Q;
+				INFOPLIST_FILE = RecorderTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = alan.RecorderTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Recorder.app/Recorder";
+			};
+			name = Debug;
+		};
+		E7544D9F2554151500AC036F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = KCXSK3HU9Q;
+				INFOPLIST_FILE = RecorderTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = alan.RecorderTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Recorder.app/Recorder";
+			};
+			name = Release;
+		};
+		E7544DA12554151500AC036F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = KCXSK3HU9Q;
+				INFOPLIST_FILE = RecorderUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = alan.RecorderUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Recorder;
+			};
+			name = Debug;
+		};
+		E7544DA22554151500AC036F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = KCXSK3HU9Q;
+				INFOPLIST_FILE = RecorderUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = alan.RecorderUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Recorder;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E7544D662554151200AC036F /* Build configuration list for PBXProject "Recorder" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E7544D982554151500AC036F /* Debug */,
+				E7544D992554151500AC036F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E7544D9A2554151500AC036F /* Build configuration list for PBXNativeTarget "Recorder" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E7544D9B2554151500AC036F /* Debug */,
+				E7544D9C2554151500AC036F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E7544D9D2554151500AC036F /* Build configuration list for PBXNativeTarget "RecorderTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E7544D9E2554151500AC036F /* Debug */,
+				E7544D9F2554151500AC036F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E7544DA02554151500AC036F /* Build configuration list for PBXNativeTarget "RecorderUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E7544DA12554151500AC036F /* Debug */,
+				E7544DA22554151500AC036F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = E7544D632554151200AC036F /* Project object */;
+}
