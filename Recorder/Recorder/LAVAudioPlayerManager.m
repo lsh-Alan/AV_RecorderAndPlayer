@@ -61,7 +61,7 @@ static LAVAudioPlayerManager *_audioPlayerManager;
 {
     NSString *temPath = NSTemporaryDirectory();
     NSString *time = [NSString stringWithFormat:@"%0.f",[[NSDate date] timeIntervalSince1970]];
-    self.playFilePath = [temPath stringByAppendingPathComponent:[NSString stringWithFormat:@"%@.caf",time]];
+    self.playFilePath = [temPath stringByAppendingPathComponent:[NSString stringWithFormat:@"%@.wav",time]];
     
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
         [data writeToFile:self.playFilePath atomically:YES];

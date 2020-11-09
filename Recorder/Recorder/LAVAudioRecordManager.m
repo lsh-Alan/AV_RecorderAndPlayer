@@ -94,7 +94,7 @@ static LAVAudioRecordManager *_audioRecordManager;
     
     NSError *error = nil;
     NSDictionary *recordSetting = @{
-        AVFormatIDKey : @(kAudioFormatAppleIMA4),// 音频格式
+        AVFormatIDKey : @(kAudioFormatLinearPCM),// 音频格式
         AVSampleRateKey : @44100.0f,// 录音采样率(Hz) 如：AVSampleRateKey==8000/44100/96000（影响音频的质量）
         AVNumberOfChannelsKey : @1,// 音频通道数 1 或 2
         AVEncoderBitDepthHintKey : @16,// 线性音频的位深度 8、16、24、32
@@ -165,9 +165,9 @@ static LAVAudioRecordManager *_audioRecordManager;
 // 获取沙盒路径
 - (NSString *)filePath {
   
-    NSString *temPath = NSTemporaryDirectory();
+    NSString *temPath = NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES).lastObject;
     NSString *time = [NSString stringWithFormat:@"%0.f",[[NSDate date] timeIntervalSince1970]];
-    NSString *filePath = [temPath stringByAppendingPathComponent:[NSString stringWithFormat:@"%@.caf",time]];
+    NSString *filePath = [temPath stringByAppendingPathComponent:[NSString stringWithFormat:@"%@.wav",time]];//caf
     return filePath;
 }
 
