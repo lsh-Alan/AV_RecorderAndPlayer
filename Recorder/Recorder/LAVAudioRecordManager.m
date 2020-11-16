@@ -101,6 +101,10 @@ static LAVAudioRecordManager *_audioRecordManager;
         AVEncoderAudioQualityKey : @(AVAudioQualityHigh)// 录音的质量
     };
     
+    //比特率 ： 采样率 * 量化格式 * 通道数   = 44100 * 16 * 1 = 689.0625 kbps (换算成了kb)
+
+    // 1分钟占用多少存储空间： 689.0625 * 60 / 8 /1024 = 5.04M
+    
     self.resourcePath = [self filePath];
     self.avAudioRecorder = [[AVAudioRecorder alloc] initWithURL:[NSURL fileURLWithPath:self.resourcePath] settings:recordSetting error:&error];
 
