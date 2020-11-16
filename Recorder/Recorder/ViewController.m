@@ -36,7 +36,36 @@
     playButton.backgroundColor = [UIColor greenColor];
     [playButton addTarget:self action:@selector(play:) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:playButton];
+    
+    
+    
+    //需要检测会话被其他app打断通知
+    NSNotificationCenter *nsnc = [NSNotificationCenter defaultCenter];
+            [nsnc addObserver:self selector:@selector(handleInterruption:) name:AVAudioSessionInterruptionNotification object:[AVAudioSession sharedInstance]];
+
 }
+
+//处理回调
+- (void)handleInterruption: (NSNotification *)notification
+{
+    NSDictionary *info = notification.userInfo;
+    AVAudioSessionInterruptionType type = [info[AVAudioSessionInterruptionTypeKey] unsignedIntegerValue];
+    
+    if (type == AVAudioSessionInterruptionTypeBegan) {
+        NSLog(@"           被中断");
+        //可以做停止采集操作
+    }else if (type == AVAudioSessionInterruptionTypeEnded) {
+        NSLog(@"    中断已结束");
+            
+    } else {
+       // Handle
+        AVAudioSessionInterruptionOptions options = [info[AVAudioSessionInterruptionOptionKey] unsignedIntegerValue];
+        if (options == AVAudioSessionInterruptionOptionShouldResume) {//:表示此时也应该恢复继续播放和采集。
+           
+        }
+    }
+}
+
 
 - (void)startRecode:(UIButton *)button
 {

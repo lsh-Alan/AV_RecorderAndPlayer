@@ -54,6 +54,36 @@
  [[AVAudioSession sharedInstance] setActive:NO withOptions:AVAudioSessionSetActiveOptionNotifyOthersOnDeactivation error:nil];
  
  
+ 
+ 
+ 另外还需要配置通知
+ //需要检测会话被其他app打断通知
+ NSNotificationCenter *nsnc = [NSNotificationCenter defaultCenter];
+         [nsnc addObserver:self selector:@selector(handleInterruption:) name:AVAudioSessionInterruptionNotification object:[AVAudioSession sharedInstance]];
+ 
+ //处理回调
+ - (void)handleInterruption: (NSNotification *)notification
+ {
+     NSDictionary *info = notification.userInfo;
+     AVAudioSessionInterruptionType type = [info[AVAudioSessionInterruptionTypeKey] unsignedIntegerValue];
+     
+     if (type == AVAudioSessionInterruptionTypeBegan) {
+         NSLog(@"           被中断");
+         //可以做停止采集操作
+     }else if (type == AVAudioSessionInterruptionTypeEnded) {
+         NSLog(@"    中断已结束");
+             
+     } else {
+        // Handle
+         AVAudioSessionInterruptionOptions options = [info[AVAudioSessionInterruptionOptionKey] unsignedIntegerValue];
+         if (options == AVAudioSessionInterruptionOptionShouldResume) {//:表示此时也应该恢复继续播放和采集。
+            
+         }
+     }
+ }
+
+ 
+ 
  */
 #import "LAVAudioRecordManager.h"
 
@@ -105,7 +135,6 @@ static LAVAudioRecordManager *_audioRecordManager;
 
     // 1分钟占用多少存储空间： 689.0625 * 60 / 8 /1024 = 5.04M
     
-    self.resourcePath = [self filePath];
     self.avAudioRecorder = [[AVAudioRecorder alloc] initWithURL:[NSURL fileURLWithPath:self.resourcePath] settings:recordSetting error:&error];
 
     if (error) {
@@ -126,6 +155,12 @@ static LAVAudioRecordManager *_audioRecordManager;
 
 - (void)start
 {
+    if (self.avAudioRecorder) {
+        self.avAudioRecorder.delegate = nil;
+        [self.avAudioRecorder stop];
+    }
+    
+    self.resourcePath = [self filePath];
     [self setUp];
     [self.avAudioRecorder record];
     self.startRecordTime = [[NSDate date] timeIntervalSince1970];
